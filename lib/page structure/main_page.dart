@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:scoreboard/main.dart';
 import 'package:scoreboard/page%20structure/header.dart';
-
-import 'footer.dart';
+import 'package:scoreboard/pages/home_page.dart';
 
 class MainPage extends StatelessWidget {
   @override

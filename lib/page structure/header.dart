@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:html' as html;
 
 class Header extends StatelessWidget {
   @override
@@ -22,10 +23,17 @@ class Header extends StatelessWidget {
                   child: Image.asset("assets/balloons.png"),
                 ),
               ),
-              Text(
-                "SCU ICPC Community",
-                style: TextStyle(
-                  color: Colors.grey,
+              TextButton(
+                onPressed: () {
+                  html.window
+                      .open('https://www.facebook.com/ICPCSCU', "_blank");
+                },
+                child: Text(
+                  "SCU ICPC Community",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.grey,
+                  ),
                 ),
               ),
               SizedBox(width: 15),
@@ -42,7 +50,11 @@ class ContributeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {},
+      onPressed: () {
+        html.window.open(
+            'https://github.com/Waelahmed99/Mostafa-Saad-smart-sheet',
+            "_blank");
+      },
       style: ButtonStyle(
         shape: MaterialStateProperty.all(RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30.0),
