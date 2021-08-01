@@ -7,16 +7,18 @@ import 'footer.dart';
 class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Header(),
-        SizedBox(height: 10),
-        Expanded(
-          child: HomePage(),
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height,
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Header(),
+            SizedBox(height: 10),
+            HomePage(),
+          ],
         ),
-        SizedBox(height: 10),
-        Footer(),
-      ],
+      ),
     );
   }
 }

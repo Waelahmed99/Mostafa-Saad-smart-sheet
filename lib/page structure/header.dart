@@ -9,43 +9,49 @@ class Header extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       color: Colors.white,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Expanded(
                 child: Container(
-                  width: 35,
-                  height: 35,
+                  width: 40,
+                  height: 40,
                   alignment: Alignment.centerLeft,
                   child: Image.asset("assets/balloons.png"),
                 ),
               ),
-              Text("SCU ICPC Community"),
-              SizedBox(width: 15),
-              TextButton(
-                onPressed: () {},
-                style: ButtonStyle(
-                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30.0),
-                    side: BorderSide(color: Colors.blue),
-                  )),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 4, horizontal: 12),
-                  child: Text("Contribute"),
+              Text(
+                "SCU ICPC Community",
+                style: TextStyle(
+                  color: Colors.grey,
                 ),
               ),
+              SizedBox(width: 15),
+              ContributeButton(),
             ],
           ),
-          Text(
-            "Mostafa Saad smart sheet",
-            style: TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
-            ),
-          )
         ],
+      ),
+    );
+  }
+}
+
+class ContributeButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      onPressed: () {},
+      style: ButtonStyle(
+        shape: MaterialStateProperty.all(RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30.0),
+          side: BorderSide(color: Colors.blue),
+        )),
+      ),
+      child: Padding(
+        padding: EdgeInsets.symmetric(vertical: 4, horizontal: 12),
+        child: Text("Contribute"),
       ),
     );
   }
